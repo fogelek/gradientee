@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .css-bg {
+        width: 1000px;
+        height: 400px;
+        margin: 0;
+        background-image: paint(gradientee);
+        --gradientee-color-from: #00ff00;
+        --gradientee-color-to: #0000ff;
+        --gradientee-box-size: 60;
+        --gradientee-seed: 3200;
+        --gradientee-deflection-level: 20;
+        --gradientee-color-randomness: 0;
+      }
+
+      .canvas {
+        width: 500px;
+        height: 300px;
+      }
+    </style>
+    <script>
+      CSS.paintWorklet.addModule("../dist/gradientee-worklet.js");
+    </script>
+    <script type="text/javascript" src="../dist/gradientee.js"></script>
+  </head>
+  <body>
+    <div class="css-bg"></div>
+    <canvas id="canvas" class="canvas"></canvas>
+    <script>
+      const _canvas = document.getElementById("canvas");
+      const ctx = _canvas.getContext("2d");
+      gradientee(ctx, {
+        width: _canvas.clientWidth,
+        height: _canvas.clientHeight,
+        colorFrom: "#f00",
+        colorTo: "#ff0",
+        paintTriangles: false,
+        boxSize: 40,
+      });
+    </script>
+  </body>
+</html>
