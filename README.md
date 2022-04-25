@@ -3,6 +3,8 @@
 Gradientee is a tiny, self-contained library to create randomized gradient backgrounds based on triangles, squares or quadrilaterals.
 It is using [Jake Archibald's seeded random function](https://jakearchibald.com/2020/css-paint-predictably-random/) to get predictable results and avoid significant pattern changes on rerenders, for example during box resize
 
+<img width="999" alt="Gradientee example" src="https://user-images.githubusercontent.com/7346433/165068188-bcc2a1d8-c46b-474f-b809-ac1c9cd394b4.png">
+
 ## How to use
 ### Canvas painter
 Include script
