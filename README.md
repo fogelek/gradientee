@@ -6,10 +6,19 @@ It is using [Jake Archibald's seeded random function](https://jakearchibald.com/
 <img width="999" alt="Gradientee example" src="https://user-images.githubusercontent.com/7346433/165068188-bcc2a1d8-c46b-474f-b809-ac1c9cd394b4.png">
 
 ## How to use
+
+You can install package from npm: 
+
+```bash npm install gradientee``` 
+
+or use CDN:
+
+```<script src="https://unpkg.com/gradientee@latest/dist/gradientee.min.js"></script>```
+
 ### Canvas painter
 Include script
 ```html
-<script type="text/javascript" src="../dist/gradientee.js"></script>
+<script type="text/javascript" src="https://unpkg.com/gradientee/dist/gradientee.min.js"></script>
 ```
 
 and then use
@@ -20,8 +29,8 @@ and then use
 const node = document.getElementById("canvas");
 const ctx = node.getContext("2d");
 const options = {
-    width: node.clientWidth,
-    height: node.clientHeight,
+    width: node.width,
+    height: node.height,
     colorFrom: "#f00",
     colorTo: "#ff0",
 };
@@ -37,7 +46,7 @@ To use CSS Houdini paint worklet, add module import into ```<script>``` tags in 
 
 ```html
 <script type="text/javascript">
-    CSS.paintWorklet.addModule("../dist/gradientee-worklet.js");
+    CSS.paintWorklet.addModule("https://unpkg.com/gradientee/dist/gradientee-worklet.min.js");
 </script>
 ```
 

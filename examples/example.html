@@ -22,7 +22,7 @@
       }
 
       .canvas {
-        width: 500px;
+        width: 600px;
         height: 300px;
       }
     </style>
@@ -37,13 +37,13 @@
     <script>
       const _canvas = document.getElementById("canvas");
       const ctx = _canvas.getContext("2d");
+      console.log(_canvas);
       gradientee(ctx, {
-        width: _canvas.clientWidth,
-        height: _canvas.clientHeight,
+        width: _canvas.width,
+        height: _canvas.height,
         colorFrom: "#f00",
-        colorTo: "#ff0",
-        paintTriangles: false,
-        boxSize: 40,
+        colorTo: "#0f0",
+        boxSize: 20,
       });
     </script>
   </body>
