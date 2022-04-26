@@ -1,12 +1,19 @@
 {
   "name": "gradientee",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Randomized gradient background generator",
   "homepage": "https://github.com/fogelek/gradientee",
   "author": {
     "email": "michal@fogelman.pl",
     "name": "Michal Fogelman",
+    "username": "fogelek",
     "url": "https://github.com/fogelek"
+  },
+  "license": "GNU GPLv3",
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fogelek/gradientee.git"
   },
   "scripts": {
     "build": "node_modules/.bin/rollup -c"
